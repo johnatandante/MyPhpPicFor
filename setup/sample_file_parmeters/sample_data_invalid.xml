@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<parametri>
+   <!-- il nome del parametro è definito dalla proprietà nome -->
+   <parametro nome="parametro_uno">
+      <!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) -->
+      <maggiore>10</maggiore>
+      <minore>20</minore>
+   </parametro>
+   <parametro nome="parametro_due">
+      <!-- non tutti i vincoli sono obbligatori -->
+      <maggiore>3.7</maggiore>
+   </parametro>
+   <!-- i vincoli possono anche non essere definiti affatto -->
+   <parametro nome="terzo" />
+   <!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste -->
+   <risultato>
+      parametro_uno + parametro_due / terzo + parametro_1
+   </risultato>
+   
+</parametri>
