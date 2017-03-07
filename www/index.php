@@ -1,11 +1,11 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-echo __DIR__ . '/model/MyContext.php';
-include (dirname(__FILE__) . '\\..\\model\\MyContext.php');
-include (dirname(__FILE__) . '\\..\\model\\Parametro.php');
+include (__DIR__ . '/../model/MyContext.php');
+
 ?>
 <head>
     <title>My First Php Form for Pixel S.C.</title>
@@ -16,57 +16,44 @@ include (dirname(__FILE__) . '\\..\\model\\Parametro.php');
     Hello <?php echo 'World' ?> <br />
 
     <?php
-    $myfile = fopen("data/sample.xml", "r") or die("Unable to open file!");
-    $myXMLData = fread($myfile,filesize("data/sample.xml"));
-    $xml=simplexml_load_string($myXMLData) or die("Error: Cannot create object");
+
+    $context = new MyContext();
+    $filename = __DIR__ . '/data/sample.xml';
+    $context->LoadXMLData($filename);
 
     //$xml = simplexml_load_file('data/sample.xml') or die("Error: Cannot create object from data/sample.xml");
     ?>
     
     <h2>Input XML</h2>
-    <textarea style="width:400px;height:200px"><?php htmlspecialchars(print_r($myXMLData)) ?></textarea>
     
     <?php
 
-    $context = null;
-    if($xml != null) {
+    if($context->HasXml()) {
 
-        $context = new MyContext();
+        //echo '<form id="formXmlData" action="" method="POST">';
 
-        $xmlname = $xml->getName();
+        echo "<label>Input Filename: $filename </label><br />";
+        echo '<textarea name="XmlDataParameter" style="width:400px;height:200px">' . htmlspecialchars($context->XMLData) .'</textarea><br />';
 
-        echo '<form action="" method="POST">';
-        foreach($xml->children() as $parametro) {
-            $htmlComp = "";
-            $p = null;
-            switch($parametro->getName()) {
-                case 'parametro':
-                    $p = $context->AddNodoParametro($parametro['nome'], $parametro->minore, $parametro->maggiore);
-                    $htmlComp = $p->getHtmlComponent();
-                    break;
-                case 'risultato';
-                    $context->AddNodoRisultato($parametro->risultato);
-                    //echo $context.getHtmlComponent();
-                    break;
-            }
-
-            if($p) {
-                echo "<h2>Parametro $p->Name</h2>";
-                echo $htmlComp;
-            }
-
+        foreach($context->ParametriList as $parametro){
+            echo "<h2>Parametro $parametro->Name " . $parametro->getRange() . '</h2>';
+            echo $parametro->getHtmlComponent();
         }
 
-        echo '<input value = "Evaluate" type="submit" />';
-        // echo $context;
-        echo '</form>';
+        echo '<button data-bind="onclick:evaluateForm()">Evaluate</button>';
+        //echo '</form>';
+        echo '<p>First name: <strong data-bind="text: firstName"></strong></p>';
 
     } else{
         echo 'No <b>parametri</b> tag';
     }
 
     ?>
-
+    <button onclick="alert('hey')">AAA</button>
  </div>
 </body>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!--script type="text/javascript" src="js/knockout-3.4.2.js" /-->
+    <script type="text/javascript" src="js/formViewModel.js" />
 </html>

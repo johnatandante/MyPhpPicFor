@@ -8,7 +8,7 @@
    </parametro>
    <parametro nome="due">
       <!-- non tutti i vincoli sono obbligatori -->
-      <maggiore>3.7</maggiore>
+      <maggiore>3.71</maggiore>
    </parametro>
    <!-- i vincoli possono anche non essere definiti affatto -->
    <parametro nome="terzo" />

@@ -27,18 +27,34 @@ class Parametro
         // echo "Parametro $nome: $maggiore - $minore; <br />";
     }
 
+    public function getRange(){
+        $min = '';
+        $max = '';
+
+        if($this->Minore){
+            $max = "a $this->Minore";
+        }
+        if($this->Maggiore){
+            $min = "da $this->Maggiore";
+        }
+        if($min || $max)
+            return "<i>($min $max)</i>";
+        else
+            return '';
+    }
+
     public function getHtmlComponent(){
         $min = '';
         $max = '';
 
         if($this->Minore){
-            $min = 'min="'.$this->Minore.'"';
+            $max = 'max="'.$this->Minore.'"';
         }
         if($this->Maggiore){
-            $max = 'max="'.$this->Maggiore.'"';
+            $min = 'min="'.$this->Maggiore.'"';
         }
 
-        return '<input type="number" name="'.$this->Name.'" '."$min $max".' required />';
+        return '<input type="number" step="0.1" name="'.$this->Name.'" '."$min $max".' required />';
 
     }
 
