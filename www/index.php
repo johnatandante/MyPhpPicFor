@@ -26,6 +26,10 @@ include (__DIR__ . '/../model/MyContext.php');
     //$context->LoadXMLFile($filename);
     $XMLDataString = MyContext::LoadXMLFile($filename);
 
+    $c = new MyContext();
+    $c->LoadXMLData($XMLDataString);
+    echo 'aa' .$c->Risultato.'bb';
+
     ?>
     
     <h2>Input XML</h2>
@@ -41,8 +45,10 @@ include (__DIR__ . '/../model/MyContext.php');
 
         echo '<div id="parametersDiv"> </div>';
         
+        echo '<h2>Output</h2>';
+        echo '<span id="output" name="output"></span>';
         echo '<button id="EvaluateBtn">Evaluate</button>';
-        echo '<h2>Output: <span id="output" name="output">...</span></h2>';
+        echo '<span id="outputResult" name="output"></span>';
 
         echo '<h2>Send to DB</h2>';
         echo '<button id="StoreBtn">Send</button>';

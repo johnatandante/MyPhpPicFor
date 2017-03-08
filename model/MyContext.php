@@ -32,7 +32,7 @@ class MyContext
                     $this->AddNodoParametro($parametro['nome'], $parametro->minore, $parametro->maggiore);
                     break;
                 case 'risultato';
-                    $this->SetNodoRisultato($parametro->risultato);
+                    $this->SetNodoRisultato($parametro);
                     break;
             }
         }

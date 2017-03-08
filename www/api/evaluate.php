@@ -20,7 +20,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')  {
     $context = new MyContext();
     $context->LoadXMLData($xml);
     if($context->HasXml()){
-        $ret = (object) array( 'success' => true, 'message'=> 'ok', 'items' => $context->ParametriList);
+        $ret = (object) array( 'success' => true, 'message'=> 'ok', 
+            'items' => $context->ParametriList, 
+            'output' => htmlspecialchars($context->Risultato));
     } else{
         $ret = (object) array( 'success' => false,'message'=>'No valid xml');
     }

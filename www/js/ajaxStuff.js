@@ -61,7 +61,7 @@ $(document).ready(function () {
             success: function (result) {
                 if (result.success) {
                     $("#parametersDiv").empty();
-                    $("#output").text("...");
+                    $("#output").text(result.output);
 
                     for(var i = 0; i< result.items.length; i++){
                         var p = result.items[i];
@@ -88,10 +88,47 @@ $(document).ready(function () {
 
     });
 
+    function getInputParameterNodes(){
+        return $("#parametersDiv").find("input");
+    }
+
+    function mathTokenize(inputString){
+        var input = inputString.trim();
+        var res = [];
+        var tmp = "";
+        for(var i = 0; i<input.length; i++){
+            switch(input[i]){
+                case "+":
+                case "*":
+                case "/":
+                case "-":
+                case " ":
+                    if(tmp != ""){
+                        res.push(tmp);
+                        tmp = "";
+                    }
+                    res.push(input[i]);
+                    break;
+                default:
+                    tmp += input[i];
+                    break;
+            }
+        }
+
+        if(tmp != ""){
+            res.push(tmp);
+            tmp = "";
+        }
+        return res;
+    }
+
     $("#EvaluateBtn").click(function (e) {
         e.preventDefault();
-        var children = $("#parametersDiv").find("input");
+        var children = getInputParameterNodes();
         var validateAll = true;
+
+        var tokens = mathTokenize($("#output").text());
+
         for(var i = 0; i<children.length; i++) {
             var child = $(children[i]);
             var name = child.attr("Name");
@@ -107,10 +144,16 @@ $(document).ready(function () {
                 if(max)
                     validate &= (val <= parseFloat(max)); 
 
-                if(validate){
+                if(validate && tokens){
                     $( "#info-" + name).hide();
                     $( "#ok-" + name).show();
                     child.removeClass("validate-error").addClass("validate-ok");
+                    
+                    for(var j=0; j<tokens.length ; j++){
+                        if(tokens[j] == name)
+                            tokens[j] = val;
+                    }
+
                 } else{
                     $( "#info-" + name).show();
                     $( "#ok-" + name).hide();
@@ -127,9 +170,16 @@ $(document).ready(function () {
         }
 
         if(validateAll) {
-            $("#output").text("89.0001");
+            var stringa = tokens.join(" ");
+            if(stringa) {
+                try{
+                    $("#outputResult").text(eval(stringa));
+                } catch(error){
+                    $("#outputResult").text(error.message);
+                }
+            }
         } else{
-            alert("Must validate parameters");
+            alert("Must validate some parameters");
         }
         
     });
@@ -138,7 +188,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         var xml = $("#XmlDataParameter").text();
-        var output= $("#output").text();
+        var output= $("#outputResult").text();
 
         $.ajax({
             type: "POST",
@@ -150,7 +200,7 @@ $(document).ready(function () {
             success: function (result) {
                 var res = JSON.parse(result);
                 if (res.success) {
-                    alert('Data inserted');
+                    alert('Data inserted: ' + output);
                 } else {
                     alert('something goes wrong:\n' + result.message);
                 }
