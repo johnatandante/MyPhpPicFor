@@ -188,7 +188,9 @@ $(document).ready(function () {
         e.preventDefault();
 
         var xml = $("#XmlDataParameter").text();
-        var output= $("#outputResult").text();
+        var output= parseFloat($("#outputResult").text());
+
+        if(output){
 
         $.ajax({
             type: "POST",
@@ -206,8 +208,12 @@ $(document).ready(function () {
                 }
             },
             error: function (result) {
-                alert('error');
+                var res = JSON.parse(result);
+                alert('error: ' + res.message);
             }
         });
+        } else{
+             alert('Dati invalidi nel calcolo: ' +$("#outputResult").text());
+        }
     });
 });

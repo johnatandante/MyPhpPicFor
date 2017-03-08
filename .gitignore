@@ -7,3 +7,6 @@ themes/classic/views/
 
 # Yii basic project template
 basic/
+
+#logs
+www/api/logs.txt
