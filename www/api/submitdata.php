@@ -8,7 +8,7 @@ require (__DIR__ . '/../../services/DbService.php');
 $service = new DbService();
 $isPost = $_SERVER['REQUEST_METHOD'] === 'POST';
 
-$jsonRes;
+$jsonRes = json_encode('{}');
 
 //Check
 //$conn = $service->Connect();

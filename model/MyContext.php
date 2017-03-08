@@ -13,14 +13,13 @@ include (dirname(__FILE__) . '/Parametro.php');
 class MyContext
 {
     private $xml;
-    public $XMLDataString;
 
     public $ParametriList = array();
     public $Risultato = '';
 
-    public function LoadXMLFile($filename){
+    public static function LoadXMLFile($filename){
         $myfile = fopen($filename, "r") or die("Unable to open file!");
-        $this->LoadXMLData(fread($myfile, filesize($filename)));
+        return fread($myfile, filesize($filename));
     }
 
     public function LoadXMLData($xmlstring){

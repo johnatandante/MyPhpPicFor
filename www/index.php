@@ -19,9 +19,10 @@ include (__DIR__ . '/../model/MyContext.php');
 
     <?php
 
-    $context = new MyContext();
+    //$context = new MyContext();
     $filename = __DIR__ . '/data/sample.xml';
-    $context->LoadXMLFile($filename);
+    //$context->LoadXMLFile($filename);
+    $XMLDataString = MyContext::LoadXMLFile($filename);
 
     ?>
     
@@ -29,21 +30,21 @@ include (__DIR__ . '/../model/MyContext.php');
     
     <?php
 
-    if($context->HasXml()) {
+    if($XMLDataString) {
 
         // echo "<label>Input Filename: $filename </label><br />";
-        echo '<textarea id="XmlDataParameter" name="XmlDataParameter" style="width:400px;height:200px">' . htmlspecialchars($context->XMLDataString) .'</textarea><br />';
+        echo '<textarea id="XmlDataParameter" name="XmlDataParameter" style="width:400px;height:200px">' . htmlspecialchars($XMLDataString) .'</textarea><br />';
+        
+        echo '<button id="ReloadBtn">Load XML</button>';
 
-        echo '<button id="EvaluateBtn">Evaluate</button>';
-
-        echo '<div id="parametersDiv"> <div/>';
+        echo '<div id="parametersDiv"> </div>';
         //foreach($context->ParametriList as $parametro){
         //    echo "<h2>Parametro $parametro->Name " . $parametro->getRange() . '</h2>';
         //    echo $parametro->getHtmlComponent();
         //}
-
-        echo '<h2>Output</h2>';
-        echo '<label id="output" name="output"></label>';
+        
+        echo '<button id="EvaluateBtn">Evaluate</button>';
+        echo '<h2>Output: <span id="output" name="output">...</span></h2>';
 
         echo '<h2>Send to DB</h2>';
         echo '<button id="StoreBtn">Send</button>';
