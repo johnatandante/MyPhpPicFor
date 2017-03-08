@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" >
 <html>
 <?php
 error_reporting(E_ALL);
@@ -9,19 +9,20 @@ include (__DIR__ . '/../model/MyContext.php');
 ?>
 <head>
     <title>My First Php Form for Pixel S.C.</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ajaxStuff.js"></script>
 </head>
 <body>
 <h1>Operator Form</h1>
 <div>
-    Hello <?php echo 'World' ?> <br />
+    <!--Hello <?php echo 'World' ?> <br />-->
 
     <?php
 
     $context = new MyContext();
     $filename = __DIR__ . '/data/sample.xml';
-    $context->LoadXMLData($filename);
+    $context->LoadXMLFile($filename);
 
-    //$xml = simplexml_load_file('data/sample.xml') or die("Error: Cannot create object from data/sample.xml");
     ?>
     
     <h2>Input XML</h2>
@@ -30,30 +31,30 @@ include (__DIR__ . '/../model/MyContext.php');
 
     if($context->HasXml()) {
 
-        //echo '<form id="formXmlData" action="" method="POST">';
+        // echo "<label>Input Filename: $filename </label><br />";
+        echo '<textarea id="XmlDataParameter" name="XmlDataParameter" style="width:400px;height:200px">' . htmlspecialchars($context->XMLDataString) .'</textarea><br />';
 
-        echo "<label>Input Filename: $filename </label><br />";
-        echo '<textarea name="XmlDataParameter" style="width:400px;height:200px">' . htmlspecialchars($context->XMLData) .'</textarea><br />';
+        echo '<button id="EvaluateBtn">Evaluate</button>';
 
-        foreach($context->ParametriList as $parametro){
-            echo "<h2>Parametro $parametro->Name " . $parametro->getRange() . '</h2>';
-            echo $parametro->getHtmlComponent();
-        }
+        echo '<div id="parametersDiv"> <div/>';
+        //foreach($context->ParametriList as $parametro){
+        //    echo "<h2>Parametro $parametro->Name " . $parametro->getRange() . '</h2>';
+        //    echo $parametro->getHtmlComponent();
+        //}
 
-        echo '<button data-bind="onclick:evaluateForm()">Evaluate</button>';
-        //echo '</form>';
-        echo '<p>First name: <strong data-bind="text: firstName"></strong></p>';
+        echo '<h2>Output</h2>';
+        echo '<label id="output" name="output"></label>';
+
+        echo '<h2>Send to DB</h2>';
+        echo '<button id="StoreBtn">Send</button>';
 
     } else{
         echo 'No <b>parametri</b> tag';
     }
 
     ?>
-    <button onclick="alert('hey')">AAA</button>
- </div>
+
+ </div>    
 </body>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <!--script type="text/javascript" src="js/knockout-3.4.2.js" /-->
-    <script type="text/javascript" src="js/formViewModel.js" />
 </html>

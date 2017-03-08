@@ -7,5 +7,5 @@
         };
     }
 
-    //ko.applyBindings(new FormViewModel());
+    ko.applyBindings(new FormViewModel());
     alert("script runed");

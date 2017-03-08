@@ -12,8 +12,8 @@ class Parametro
 {
     public $Numero;
 
-    private $Minore;
-    private $Maggiore;
+    public $Minore;
+    public $Maggiore;
 
     public $Name;
     private $Value;
@@ -54,7 +54,7 @@ class Parametro
             $min = 'min="'.$this->Maggiore.'"';
         }
 
-        return '<input type="number" step="0.1" name="'.$this->Name.'" '."$min $max".' required />';
+        return '<input type="number" step="0.1" id="'.$this->Name.'" name="'.$this->Name.'" '."$min $max".' required />';
 
     }
 

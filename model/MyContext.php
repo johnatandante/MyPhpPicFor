@@ -13,15 +13,19 @@ include (dirname(__FILE__) . '/Parametro.php');
 class MyContext
 {
     private $xml;
-    public $XMLData;
+    public $XMLDataString;
 
     public $ParametriList = array();
     public $Risultato = '';
 
-    public function LoadXMLData($filename){
+    public function LoadXMLFile($filename){
         $myfile = fopen($filename, "r") or die("Unable to open file!");
-        $this->XMLData = fread($myfile, filesize($filename));
-        $this->xml=simplexml_load_string($this->XMLData) or die("Error: Cannot create object");
+        $this->LoadXMLData(fread($myfile, filesize($filename)));
+    }
+
+    public function LoadXMLData($xmlstring){
+        $this->XMLDataString = $xmlstring;
+        $this->xml=simplexml_load_string($this->XMLDataString) or die("Error: Cannot create object");
 
         foreach($this->xml->children() as $parametro) {
             switch($parametro->getName()) {

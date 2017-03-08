@@ -1,0 +1,300 @@
+2017-03-08 12:10:11insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:10:20insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:11:22insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:11:25insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:14:09insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:14:28insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:14:36insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:14:39insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:14:56insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:15:50insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:20:42insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:20:58insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', '666,7');
+2017-03-08 12:23:54insert into data_log(browser,parametri,risultato) values('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.10240', '&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;parametri&gt;
+   &lt;!-- il nome del parametro è definito dalla proprietà nome --&gt;
+   &lt;parametro nome=&quot;uno&quot;&gt;
+      &lt;!-- i tag specificano i vincoli sui valori del parametro (i nomi dei tag sono autoesplicativi) --&gt;
+      &lt;maggiore&gt;10&lt;/maggiore&gt;
+      &lt;minore&gt;20&lt;/minore&gt;
+   &lt;/parametro&gt;
+   &lt;parametro nome=&quot;due&quot;&gt;
+      &lt;!-- non tutti i vincoli sono obbligatori --&gt;
+      &lt;maggiore&gt;3.71&lt;/maggiore&gt;
+   &lt;/parametro&gt;
+   &lt;!-- i vincoli possono anche non essere definiti affatto --&gt;
+   &lt;parametro nome=&quot;terzo&quot; /&gt;
+   &lt;!-- il seguente tag descrive il calcolo che dovrà essere eseguito.
+   I possibili operandi sono: + - * / e la precedenza degli operatori è definita dalle solite regole matematiche.
+   Le parentesi non sono previste --&gt;
+   &lt;risultato&gt;
+      uno * due + tre / terzo + uno
+   &lt;/risultato&gt;
+   
+&lt;/parametri&gt;
+', 666.7);
+

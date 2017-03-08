@@ -16,6 +16,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="services\DbService.php" />
     <Compile Include="model\MyContext.php" />
     <Compile Include="model\Parametro.php" />
     <Compile Include="setup\sample_file_parmeters\sample_data_1.xml" />
@@ -27,19 +28,110 @@
     <Compile Include="setup\init_db_data_log.sql">
       <Publishable>False</Publishable>
     </Compile>
+    <Compile Include="www\api\evaluate.php" />
     <Compile Include="www\data\sample.xml" />
     <Compile Include="www\index.php" />
+    <Compile Include="www\api\submitdata.php" />
     <Compile Include="www\test.php" />
     <Compile Include=".gitignore" />
     <Compile Include="LICENSE" />
     <Compile Include="MyPhpPicFor.sln" />
     <Compile Include="README.md" />
+    <Compile Include="yiiapp\assets\AppAsset.php" />
+    <Compile Include="yiiapp\commands\HelloController.php" />
+    <Compile Include="yiiapp\config\console.php" />
+    <Compile Include="yiiapp\config\db.php" />
+    <Compile Include="yiiapp\config\params.php" />
+    <Compile Include="yiiapp\config\test.php" />
+    <Compile Include="yiiapp\config\test_db.php" />
+    <Compile Include="yiiapp\config\web.php" />
+    <Compile Include="yiiapp\controllers\SiteController.php" />
+    <Compile Include="yiiapp\mail\layouts\html.php" />
+    <Compile Include="yiiapp\models\ContactForm.php" />
+    <Compile Include="yiiapp\models\LoginForm.php" />
+    <Compile Include="yiiapp\models\User.php" />
+    <Compile Include="yiiapp\requirements.php" />
+    <Compile Include="yiiapp\tests\acceptance\AboutCest.php" />
+    <Compile Include="yiiapp\tests\acceptance\ContactCest.php" />
+    <Compile Include="yiiapp\tests\acceptance\HomeCest.php" />
+    <Compile Include="yiiapp\tests\acceptance\LoginCest.php" />
+    <Compile Include="yiiapp\tests\acceptance\_bootstrap.php" />
+    <Compile Include="yiiapp\tests\functional\ContactFormCest.php" />
+    <Compile Include="yiiapp\tests\functional\LoginFormCest.php" />
+    <Compile Include="yiiapp\tests\functional\_bootstrap.php" />
+    <Compile Include="yiiapp\tests\unit\models\ContactFormTest.php" />
+    <Compile Include="yiiapp\tests\unit\models\LoginFormTest.php" />
+    <Compile Include="yiiapp\tests\unit\models\UserTest.php" />
+    <Compile Include="yiiapp\tests\unit\_bootstrap.php" />
+    <Compile Include="yiiapp\tests\_bootstrap.php" />
+    <Compile Include="yiiapp\tests\_support\AcceptanceTester.php" />
+    <Compile Include="yiiapp\tests\_support\FunctionalTester.php" />
+    <Compile Include="yiiapp\tests\_support\UnitTester.php" />
+    <Compile Include="yiiapp\views\layouts\main.php" />
+    <Compile Include="yiiapp\views\site\about.php" />
+    <Compile Include="yiiapp\views\site\contact.php" />
+    <Compile Include="yiiapp\views\site\error.php" />
+    <Compile Include="yiiapp\views\site\index.php" />
+    <Compile Include="yiiapp\views\site\login.php" />
+    <Compile Include="yiiapp\web\index-test.php" />
+    <Compile Include="yiiapp\web\index.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="model\" />
+    <Folder Include="services\" />
     <Folder Include="setup\sample_file_parmeters" />
     <Folder Include="setup" />
     <Folder Include="www\data" />
     <Folder Include="www" />
+    <Folder Include="www\js\" />
+    <Folder Include="www\api\" />
+    <Folder Include="yiiapp\" />
+    <Folder Include="yiiapp\assets\" />
+    <Folder Include="yiiapp\commands\" />
+    <Folder Include="yiiapp\config\" />
+    <Folder Include="yiiapp\controllers\" />
+    <Folder Include="yiiapp\mail\" />
+    <Folder Include="yiiapp\mail\layouts\" />
+    <Folder Include="yiiapp\models\" />
+    <Folder Include="yiiapp\runtime\" />
+    <Folder Include="yiiapp\tests\" />
+    <Folder Include="yiiapp\tests\acceptance\" />
+    <Folder Include="yiiapp\tests\bin\" />
+    <Folder Include="yiiapp\tests\functional\" />
+    <Folder Include="yiiapp\tests\unit\" />
+    <Folder Include="yiiapp\tests\unit\models\" />
+    <Folder Include="yiiapp\tests\_data\" />
+    <Folder Include="yiiapp\tests\_support\" />
+    <Folder Include="yiiapp\views\" />
+    <Folder Include="yiiapp\views\layouts\" />
+    <Folder Include="yiiapp\views\site\" />
+    <Folder Include="yiiapp\web\" />
+    <Folder Include="yiiapp\web\assets\" />
+    <Folder Include="yiiapp\web\css\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="www\js\ajaxStuff.js" />
+    <Content Include="www\js\formViewModel.js" />
+    <Content Include="www\js\knockout-3.4.2.js" />
+    <Content Include="yiiapp\.bowerrc" />
+    <Content Include="yiiapp\.gitignore" />
+    <Content Include="yiiapp\codeception.yml" />
+    <Content Include="yiiapp\composer.json" />
+    <Content Include="yiiapp\composer.lock" />
+    <Content Include="yiiapp\LICENSE.md" />
+    <Content Include="yiiapp\README.md" />
+    <Content Include="yiiapp\runtime\.gitignore" />
+    <Content Include="yiiapp\tests\acceptance.suite.yml.example" />
+    <Content Include="yiiapp\tests\bin\yii" />
+    <Content Include="yiiapp\tests\bin\yii.bat" />
+    <Content Include="yiiapp\tests\functional.suite.yml" />
+    <Content Include="yiiapp\tests\unit.suite.yml" />
+    <Content Include="yiiapp\tests\_data\.gitignore" />
+    <Content Include="yiiapp\web\assets\.gitignore" />
+    <Content Include="yiiapp\web\css\site.css" />
+    <Content Include="yiiapp\web\favicon.ico" />
+    <Content Include="yiiapp\web\robots.txt" />
+    <Content Include="yiiapp\yii" />
+    <Content Include="yiiapp\yii.bat" />
   </ItemGroup>
 </Project>
