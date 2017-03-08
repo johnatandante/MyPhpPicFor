@@ -1,0 +1,25 @@
+.validate-ok {
+    border-width: 1px;
+    border-style: solid;
+    border-color: green;
+}
+
+.validate-error{
+    border-width: 1px;
+    border-style: solid;
+    border-color: darkred;
+}
+
+.parameter-error-info {
+    color: red;
+}
+
+.parameter-ok-info {
+    width: 1em;
+    height: 1em;
+    background-image: url("../assets/ok.png");
+    background-size: 1em 1em;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}

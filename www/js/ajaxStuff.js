@@ -1,8 +1,19 @@
 ﻿
 function getHtmlForParameter(item) {
     var string = "";
-    string += "<h2>Parameter " +  item.Name[0] + " <i>" + getLabelRange(item) +"</i></h2>";
-    string += '<input type="number" step="0.1" id="' + item.Name[0] + ' name="' + item.Name[0] +'" ' + getNumericStepperRange(item)  + ' required />';
+    var labelRange = getLabelRange(item);
+    var labelRangeText = labelRange;
+    
+    if(labelRange != " ")
+        labelRangeText = " <i>(" + labelRangeText+")</i>";
+
+    string += "<h2>Parameter " +  item.Name[0] + labelRangeText +"</h2>";
+    string += '<input type="number" step="0.1" id="' + item.Name[0] + '" name="' + item.Name[0] +'" ' + getNumericStepperRange(item)  + ' required />';
+
+    if(labelRange != " ")
+        string += '<span id="info-' + item.Name[0] + '" name="info-' + item.Name[0] +'" class="parameter-error-info"> * Value must be ' + labelRange + ' </span>';
+    
+    string += '<span class="parameter-ok-info" id="ok-' + item.Name[0] + '" name="ok-' + item.Name[0] +'" style="display: none;"></span>';
 
     return string;
 }
@@ -31,11 +42,6 @@ function getLabelRange(item) {
 
     if(item.Maggiore[0]){
         min = "da " + item.Maggiore[0];
-    }
-
-    if(min != "" || max != ""){
-        min ="("+min;
-        max +=")";
     }
 
     return min + " " + max;
@@ -84,8 +90,47 @@ $(document).ready(function () {
 
     $("#EvaluateBtn").click(function (e) {
         e.preventDefault();
+        var children = $("#parametersDiv").find("input");
+        var validateAll = true;
+        for(var i = 0; i<children.length; i++) {
+            var child = $(children[i]);
+            var name = child.attr("Name");
+            var val = parseFloat(children[i].value);
+            var validate = true;
 
-        $("#output").text("89.0001");
+            if(val){
+                var min = child.prop("min");
+                if(min)
+                    validate &= (val >= parseFloat(min)); 
+
+                var max = child.prop("max");
+                if(max)
+                    validate &= (val <= parseFloat(max)); 
+
+                if(validate){
+                    $( "#info-" + name).hide();
+                    $( "#ok-" + name).show();
+                    child.removeClass("validate-error").addClass("validate-ok");
+                } else{
+                    $( "#info-" + name).show();
+                    $( "#ok-" + name).hide();
+                    child.removeClass("validate-ok").addClass("validate-error");
+                }
+            } else{
+                validate = false;
+                $( "#info-" + name).show();
+                $( "#ok-" + name).hide();
+                child.removeClass("validate-ok").addClass("validate-error");
+            }
+            validateAll &= validate;
+
+        }
+
+        if(validateAll) {
+            $("#output").text("89.0001");
+        } else{
+            alert("Must validate parameters");
+        }
         
     });
 

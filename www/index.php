@@ -8,13 +8,15 @@ include (__DIR__ . '/../model/MyContext.php');
 
 ?>
 <head>
+    <link rel="stylesheet" href="css/style.css">
+	
     <title>My First Php Form for Pixel S.C.</title>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/ajaxStuff.js"></script>
 </head>
 <body>
 <h1>Operator Form</h1>
-<div>
+<div >
     <!--Hello <?php echo 'World' ?> <br />-->
 
     <?php
@@ -38,10 +40,6 @@ include (__DIR__ . '/../model/MyContext.php');
         echo '<button id="ReloadBtn">Load XML</button>';
 
         echo '<div id="parametersDiv"> </div>';
-        //foreach($context->ParametriList as $parametro){
-        //    echo "<h2>Parametro $parametro->Name " . $parametro->getRange() . '</h2>';
-        //    echo $parametro->getHtmlComponent();
-        //}
         
         echo '<button id="EvaluateBtn">Evaluate</button>';
         echo '<h2>Output: <span id="output" name="output">...</span></h2>';
