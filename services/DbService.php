@@ -56,7 +56,7 @@ class DbService
         $sqlstring = "insert into data_log(browser,parametri,risultato) values('$agent', '$xml', $output);";
 
         // log
-        file_put_contents('logs.txt', (new \DateTime())->format('Y-m-d H:i:s') .  $sqlstring."\n\r" , FILE_APPEND | LOCK_EX);
+        file_put_contents('logs.txt', (new DateTime())->format('Y-m-d H:i:s') .  $sqlstring."\n\r" , FILE_APPEND | LOCK_EX);
 
         return $this->conn->query($sqlstring);
 
