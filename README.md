@@ -13,6 +13,10 @@ L'applicazione utilizza le seguenti:
 
 Per semplicità di instalazione si è scelto di creare un database generico "data_log", con i campi indicati nella consegna, tramite lo script https://github.com/johnatandante/MyPhpPicFor/blob/master/setup/init_db_data_log.sql; le impostazioni di default della connessione sono impostate via codice nella classe Php https://github.com/johnatandante/MyPhpPicFor/blob/master/services/DbService.php. Qualora si volesse cambiare questa configurazione occorre intervenire su questo file. 
 
+Per la stesura del codice si è preferito utilizzare Visual Studio Code, mentre per il debugging delle pagine web e Javascript si è scelto l'utilizzo di Firefox, Chrome e Safari, con i loro strumenti di sviluppo.
+
+Il sitema è stato installato, configurato e testato su ambienti Windows e Mac (OsX 10.X).
+
 #Architettura
 L'applicazione si stuttura in un sistema WebApp che consuma dei servizi api offerti dall'application server.
 L'elaborazione dell'XML, difatti è offerta dalla API evaluate.php, mentre l'interazione con il database è offerta dalla API submitdata.php
